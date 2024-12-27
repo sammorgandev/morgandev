@@ -1,0 +1,49 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import designSystem from './planetaria-design-system.png'
+
+export const article = {
+  author: 'Sam Morgan',
+  date: '2023-10-10',
+  title: 'Learning Software Development Principles with Bubble.io',
+  description:
+    'Discover how Bubble.io helped me understand the basics of software development, including frontend vs. backend, databases, and workflows.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Learning the basic principles of software development can be daunting, but Bubble.io made it accessible for me. Through this platform, I grasped essential concepts like the difference between frontend and backend, the role of databases, and how workflows (functions) tie everything together.
+
+<Image src={designSystem} alt="Bubble.io interface" />
+
+Understanding these fundamentals allowed me to branch out and start learning code, making sense of what I was learning in a practical way.
+
+## Frontend vs. Backend
+
+In Bubble.io, I learned that the frontend is what users interact with, while the backend is where the data is processed and stored. This distinction is crucial for building any application. The frontend is the visual layer, the part of the application that users see and interact with. It includes everything from buttons and text fields to images and animations. Bubble.io's drag-and-drop interface made it easy to design this layer without writing a single line of code.
+
+On the other hand, the backend is the engine that powers the application. It handles data processing, business logic, and communication with databases. Bubble.io abstracts much of this complexity, allowing you to focus on defining what your application should do rather than how it does it. This separation of concerns is a fundamental principle in software development, and understanding it was a game-changer for me.
+
+## Databases
+
+Bubble.io's visual database editor helped me understand how data is structured and managed. I learned to create data types and fields, which are the building blocks of any app's data model. A database is essentially a collection of data organized in a way that makes it easy to access, manage, and update. In Bubble.io, you can define custom data types that represent the entities in your application, such as users, products, or orders.
+
+Each data type can have multiple fields, which are the attributes of that entity. For example, a "User" data type might have fields like "Name," "Email," and "Profile Picture." Bubble.io's intuitive interface made it easy to visualize these relationships and understand how data flows through an application. This knowledge was invaluable when I started working with more complex databases in traditional programming environments.
+
+## Workflows
+
+Workflows in Bubble.io are akin to functions in traditional programming. They allowed me to automate processes and define the logic of my application, providing a hands-on understanding of how software operates. A workflow is a series of actions that are triggered by an event, such as a button click or a page load. Each action can perform a specific task, like updating a database record, sending an email, or navigating to another page.
+
+Bubble.io's visual workflow editor made it easy to define these actions and see how they fit together. This visual approach helped me understand the concept of control flow, which is how a program decides what actions to perform and in what order. By experimenting with different workflows, I learned how to build complex logic and automate repetitive tasks, skills that have been incredibly useful in my coding journey.
+
+1. Understanding user interfaces: Bubble.io's drag-and-drop editor made it easy to design beautiful, responsive interfaces without writing code.
+2. Managing data effectively: The visual database editor helped me understand how to structure and manage data, a crucial skill for any developer.
+3. Automating processes with workflows: I learned how to define complex logic and automate tasks, making my applications more efficient and user-friendly.
+4. Bridging the gap to traditional coding: Bubble.io provided a solid foundation that made learning traditional programming languages more intuitive.
+5. Building confidence in software development: By building real applications, I gained the confidence to tackle more complex projects and continue my learning journey.
+
+Bubble.io was my gateway to the world of software development, providing a solid foundation that made learning code more intuitive and less intimidating. It demystified many of the concepts that had previously seemed out of reach and gave me the confidence to explore further. Whether you're a complete beginner or an experienced developer looking to prototype ideas quickly, Bubble.io is a powerful tool that can help you bring your visions to life.

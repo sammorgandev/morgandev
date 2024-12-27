@@ -1,0 +1,57 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Adam Wathan',
+  date: '2023-10-10',
+  title: 'Rewriting the cosmOS Kernel in Rust',
+  description:
+    'Explore the journey of rewriting the cosmOS kernel in Rust, highlighting the benefits and challenges of using Rust for system-level programming.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+When we released the first version of cosmOS last year, it was written in Go. While Go is a wonderful programming language, the decision to rewrite the kernel in Rust was driven by Rust's unique advantages in system-level programming.
+
+Rust's focus on safety and performance makes it an ideal choice for operating system development. Its ownership model ensures memory safety without a garbage collector, preventing common bugs like null pointer dereferences and buffer overflows.
+
+```rust
+use ferris_says::say;
+use std::io::{stdout, BufWriter};
+
+fn main() {
+    let stdout = stdout();
+    let message = String::from("Hello fellow hackers");
+    let width = message.chars().count();
+
+    let mut writer = BufWriter::new(stdout.lock());
+    say(message.as_bytes(), width, &mut writer).unwrap();
+}
+```
+
+This simple Rust program demonstrates the language's syntax and safety features, which are crucial for building reliable system software.
+
+## The Benefits of Rust
+
+Rewriting the cosmOS kernel in Rust provided several benefits:
+
+- **Memory Safety**: Rust's strict compile-time checks prevent memory-related errors, a common source of vulnerabilities in system software.
+- **Concurrency**: Rust's ownership model makes it easier to write concurrent code without data races, improving the performance and reliability of the kernel.
+- **Performance**: Rust's performance is comparable to C and C++, making it suitable for performance-critical applications like operating systems.
+
+## Challenges and Solutions
+
+While Rust offers many advantages, rewriting the kernel presented some challenges:
+
+- **Learning Curve**: Rust's unique features require a shift in mindset for developers accustomed to other languages. However, the benefits in safety and performance are well worth the effort.
+- **Ecosystem Maturity**: While Rust's ecosystem is growing rapidly, some libraries and tools are still maturing. We contributed to the community by developing and open-sourcing several components used in cosmOS.
+
+## Conclusion
+
+Rewriting the cosmOS kernel in Rust was a challenging but rewarding journey. Rust's focus on safety, performance, and concurrency makes it an excellent choice for system-level programming. As the Rust ecosystem continues to grow, we look forward to seeing more projects embrace this powerful language.
+
+Explore the possibilities with Rust and discover how it can transform your approach to system software development.

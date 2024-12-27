@@ -1,0 +1,57 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Adam Wathan',
+  date: '2023-10-10',
+  title: 'Introducing Animaginary: High Performance Web Animations',
+  description:
+    'Explore the technical innovations behind Animaginary, a web animation library that pushes the boundaries of what is possible on the web.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+When building a website for a company as ambitious as Planetaria, making an impression is crucial. Animaginary was developed to deliver animations that are not only visually stunning but also highly performant, leveraging the latest advancements in web technology.
+
+To achieve this, we focused on optimizing every aspect of the animation process, from rendering to execution. Animaginary is hand-written in optimized WebAssembly (WASM), allowing it to animate properties like `height` at 60fps, a feat previously thought impossible on the web.
+
+## The Technology Behind Animaginary
+
+Animaginary utilizes WebAssembly to achieve unparalleled performance. By compiling critical parts of the animation engine to WASM, we ensure that animations run smoothly even on resource-constrained devices.
+
+```js
+import { animate } from '@planetaria/animaginary'
+
+export function MyComponent({ open, children }) {
+  return (
+    <animate.div
+      in={open}
+      animateFrom="opacity-0 scale-95"
+      animateTo="opacity-100 scale-100"
+      duration={350}
+    >
+      {children}
+    </animate.div>
+  )
+}
+```
+
+This example demonstrates how Animaginary's API allows developers to create complex animations with minimal code, focusing on the desired effect rather than the underlying mechanics.
+
+## Performance Optimization
+
+To maximize performance, Animaginary employs several optimization techniques:
+
+- **Efficient Rendering**: By minimizing reflows and repaints, Animaginary ensures that animations remain smooth and responsive.
+- **Hardware Acceleration**: Animaginary leverages GPU acceleration to offload rendering tasks, freeing up the CPU for other operations.
+- **Lazy Evaluation**: Animations are only calculated when necessary, reducing the computational overhead.
+
+## Conclusion
+
+Animaginary represents a significant leap forward in web animation technology, combining cutting-edge techniques with a developer-friendly API. Whether you're building a simple website or a complex web application, Animaginary provides the tools you need to create animations that captivate and engage users.
+
+Explore the possibilities with Animaginary and redefine what you thought was possible on the web.
